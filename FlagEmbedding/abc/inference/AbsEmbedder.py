@@ -59,8 +59,7 @@ class AbsEmbedder(ABC):
         convert_to_numpy: bool = True,
         **kwargs: Any,
     ):
-        logger.info("Phophor Initializing AbsEmbedder, devices: {}, model_name_or_path: {}"
-                    .format(", ".join(map(str, devices)), model_name_or_path))
+        logger.info("Phophor Initializing AbsEmbedder, model_name_or_path: {}".format(model_name_or_path))
         self.model_name_or_path = model_name_or_path
         self.normalize_embeddings = normalize_embeddings
         self.use_fp16 = use_fp16
